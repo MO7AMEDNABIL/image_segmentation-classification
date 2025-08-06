@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Image AI App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='index_style.css') }}">
+</head>
+<body>
+    <h1>WELCOME TO BRAIN TUMOR DETECTOR</h1>
+    <div class="centered-text-box">
+    <h6>
+       Persistent headaches, blurred vision, or unexplained nausea could be warning signs of a brain tumor. Early detection is critical—our AI-powered tool helps detect and classify head tumors quickly and accurately. If you’re experiencing unusual symptoms like seizures, memory loss, or balance issues, don’t ignore them. Get checked today for peace of mind and timely care. Your brain health matters—take the first step now.
+
+    </h6>
+</div>
+    <h2>Choose Task You Need</h2>
+    <form action="/predict" method="post" enctype="multipart/form-data">
+       <label>
+  <input type="radio" name="task" value="classification" checked>
+  Classification
+</label><br>
+
+<label>
+  <input type="radio" name="task" value="segmentation">
+  Segmentation
+</label>
+        <input type="file" name="image"><br><br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>

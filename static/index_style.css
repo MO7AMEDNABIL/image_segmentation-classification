@@ -1,0 +1,163 @@
+/* Reset default margins and fonts */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: url('brain.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* centers the form vertically */
+    min-height: 100vh;
+}
+
+h1 {
+    font-size: 50px;     /* remove default spacing */
+    margin-bottom: 150px;
+    color: #ffffff;
+}
+.centered-text-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh; /* full screen height */
+    padding: 30px;
+    text-align: center;
+    background-color: rgba(73, 17, 227, 0.105); /* semi-transparent white */
+    backdrop-filter: blur(4px); /* optional: subtle blur effect */
+    border-radius: 12px;
+    margin: 0 auto;
+    width: 80%;
+    max-width: 900px;
+}
+
+.centered-text-box h6 {
+    font-weight: 300; /* thin font */
+    font-size: 26px;
+    color: #ffffff;
+    line-height: 1.6;
+}
+h2 {
+    font-size: 50px;
+    margin-bottom: 20px;
+    color: #04ff6cf7;
+    background-color: #031337; /* dark background */
+    padding: 10px 20px;
+    border-radius: 8px;
+    display: inline-block; /* so background wraps the text only */
+}
+
+form {
+    background-color: rgba(2, 12, 106, 0.085); /* semi-transparent dark blue */
+    padding: 30px 40px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(242, 238, 238, 0.1);
+    width: 100%;
+    max-width: 400px;
+    backdrop-filter: blur(4px); /* optional: glassy blur effect */
+    -webkit-backdrop-filter: blur(4px); /* for Safari */
+}
+
+input[type="radio"] {
+    appearance: none; /* Removes default styling */
+    width: 18px;
+    height: 18px;
+    border: 2px solid #ffffff;
+    border-radius: 50%;
+    margin-right: 10px;
+    position: relative;
+    top: 3px;
+    background-color: transparent;
+    cursor: pointer;
+    transition: border 0.2s ease, background-color 0.2s ease;
+}
+
+input[type="radio"]:checked {
+    background-color: #2ecc71;
+    border-color: #2ecc71;
+}
+
+input[type="radio"]:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(46, 204, 113, 0.4);
+}
+
+label {
+    color: #ffffff;            /* Change text color */
+    font-family: 'Segoe UI', sans-serif; /* Custom font */
+    font-size: 16px;           /* Font size */
+    font-weight: 300;          /* Thin font */
+    margin-bottom: 10px;
+    display: inline-block;
+}
+
+input[type="file"] {
+    margin: 15px 0;
+    padding: 10px;
+    font-size: 16px;
+    color: #fff;
+    background-color: rgba(44, 62, 80, 0.9); /* Dark background */
+    border: 2px solid #2ecc71;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 400px;
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+input[type="file"]::file-selector-button {
+    background-color: #2ecc71;
+    border: none;
+    padding: 10px 16px;
+    color: #fff;
+    font-weight: 600;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+input[type="file"]::file-selector-button:hover {
+    background-color: #27ae60;
+}
+
+
+input[type="submit"] {
+    background: linear-gradient(135deg, #2c3e50, #34495e); /* gradient background */
+    color: #ffffff;
+    border: none;
+    padding: 14px 24px;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 8px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    width: 100%;
+    max-width: 300px; /* prevents it from becoming too wide */
+    margin-top: 20px;
+    margin-left: 50px;
+}
+
+input[type="submit"]:hover {
+    background: linear-gradient(135deg, #1a242f, #2c3e50);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+input[type="submit"]:active {
+    transform: translateY(1px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 500px) {
+    body {
+        padding: 20px;
+    }
+
+    form {
+        padding: 20px;
+    }
+}

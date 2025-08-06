@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Result</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='result_style copy.css') }}">
+</head>
+<body>
+    <h2>Prediction Result:</h2>
+    <p>{{ result }}</p>
+    <img src="{{ image_path }}" alt="Uploaded Image" width="300">
+    <br><br>
+    <a href="/">Go Back</a>
+</body>
+</html>

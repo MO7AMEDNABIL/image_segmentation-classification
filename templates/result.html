@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Result</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='result_style.css') }}">
+</head>
+<body>
+    <h2>Prediction Result:</h2>
+    <p>{{ result }}</p>
+
+    <h3>Original Image:</h3>
+    <img src="{{ original_path }}" alt="Original Image" width="300">
+
+    <h3>Segmented Image:</h3>
+    <img src="{{ segmented_path }}" alt="Segmented Image" width="300">
+
+    <br><br>
+    <a href="/">Go Back</a>
+</body>
+</html>
